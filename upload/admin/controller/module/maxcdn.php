@@ -97,7 +97,7 @@ class ControllerModuleMaxCDN extends Controller
         );
 
         $this->data['breadcrumbs'][] = array(
-            'text' => $this->language->get('heading_title_page'),
+            'text' => $this->language->get('heading_title'),
             'href' => $this->url->link('module/maxcdn', 'token=' . $this->session->data['token'], 'SSL'),
             'separator' => ' :: '
         );

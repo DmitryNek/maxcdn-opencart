@@ -43,6 +43,12 @@
 
                 ]]></add>
         </operation>
+        <operation>
+            <search position="replace"><![CDATA[echo $output;]]></search>
+            <add><![CDATA[
+                echo $this->maxcdn($output);
+                ]]></add>
+        </operation>
     </file>
 
 </modification>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <modification>
     <name>MaxCDN</name>
+    <code>maxcdn</code>
     <version>1.0</version>
     <author>Dmitry Shkoliar @DrmitryNek</author>
     <link></link>
@@ -43,6 +44,12 @@
                     return $output;
                 }
 
+                ]]></add>
+        </operation>
+        <operation>
+            <search><![CDATA[echo $output;]]></search>
+            <add position="replace"><![CDATA[
+                echo $this->maxcdn($output);
                 ]]></add>
         </operation>
     </file>

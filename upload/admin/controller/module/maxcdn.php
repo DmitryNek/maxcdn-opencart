@@ -13,7 +13,6 @@ class ControllerModuleMaxCDN extends Controller
 
     public function index()
     {
-
         $this->load->language('module/maxcdn');
 
         $this->document->setTitle($this->language->get('heading_title'));
@@ -48,6 +47,9 @@ class ControllerModuleMaxCDN extends Controller
 
         $this->data['text_enabled'] = $this->language->get('text_enabled');
         $this->data['text_disabled'] = $this->language->get('text_disabled');
+        $this->data['text_yes'] = $this->language->get('text_yes');
+        $this->data['text_no'] = $this->language->get('text_no');
+        $this->data['text_edit'] = $this->language->get('text_edit');
 
         $this->data['button_save'] = $this->language->get('button_save');
         $this->data['button_cancel'] = $this->language->get('button_cancel');
@@ -91,7 +93,7 @@ class ControllerModuleMaxCDN extends Controller
         );
 
         $this->data['breadcrumbs'][] = array(
-            'text' => $this->language->get('text_modules'),
+            'text' => $this->language->get('text_module'),
             'href' => $this->url->link('extension/module', 'token=' . $this->session->data['token'], 'SSL'),
             'separator' => ' :: '
         );

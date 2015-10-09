@@ -22,6 +22,8 @@ $_['text_disabled'] = 'Disabled';
 $_['text_module'] = 'Modules';
 $_['text_success'] = 'Success: You have modified MaxCDN module!';
 $_['text_edit'] = 'Edit MaxCDN Module';
+$_['text_yes'] = 'Yes';
+$_['text_no'] = 'No';
 
 // Button
 $_['button_save'] = 'Save';

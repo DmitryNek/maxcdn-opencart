@@ -44,9 +44,9 @@
                 ]]></add>
         </operation>
         <operation>
-            <search position="replace"><![CDATA[echo $output;]]></search>
-            <add><![CDATA[
-                echo $this->maxcdn($output);
+            <search><![CDATA[public function output() {]]></search>
+            <add position="after"><![CDATA[
+                $this->output = $this->maxcdn($this->output);
                 ]]></add>
         </operation>
     </file>

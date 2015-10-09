@@ -1,14 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
 <modification>
-    <name>MaxCDN</name>
+    <id>MaxCDN</id>
     <version>1.0</version>
     <author>Dmitry Shkoliar @DrmitryNek</author>
-    <link></link>
 
-    <file path="system/library/response.php">
+    <file name="system/library/response.php">
         <operation>
-            <search><![CDATA[public function output() {]]></search>
-            <add position="before"><![CDATA[
+            <search position="before"><![CDATA[public function output() {]]></search>
+            <add><![CDATA[
                 private function maxcdn($output) {
                     global $config;
 

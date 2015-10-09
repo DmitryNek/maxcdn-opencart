@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+    <name>MaxCDN</name>
+    <version>1.0</version>
+    <author>Dmitry Shkoliar @DrmitryNek</author>
+    <link></link>
+
+    <file path="system/library/response.php">
+        <operation>
+            <search><![CDATA[public function output() {]]></search>
+            <add position="before"><![CDATA[
+                private function maxcdn($output) {
+                    global $config;
+
+                    if ($config->get('maxcdn_status')) {
+                        if (isset($_SERVER['HTTPS']) && (($_SERVER['HTTPS'] == 'on') || ($_SERVER['HTTPS'] == '1'))) {
+                            $domain = 'https://' . $config->get('maxcdn_domain');
+                        } else {
+                            $domain = 'http://' . $config->get('maxcdn_domain');
+                        }
+
+                        if ($config->get('maxcdn_images')) {
+                            $output = str_replace(HTTP_SERVER . 'image/', $domain . '/image/', $output);
+
+                            if (HTTP_SERVER != HTTPS_SERVER) {
+                                $output = str_replace(HTTPS_SERVER . 'image/', $domain . '/image/', $output);
+                            }
+
+                            $output = str_replace('src="catalog/view/theme/' . $config->get("config_template") . '/image/', 'src="' . $domain . '/catalog/view/theme/' . $config->get("config_template") . '/image/', $output);
+                            $output = str_replace('src="catalog/view/theme/default/image/', 'src="' . $domain . '/catalog/view/theme/default/image/', $output);
+                        }
+
+                        if ($config->get('maxcdn_js')) {
+                            $output = str_replace('src="catalog/view/javascript/', 'src="' . $domain . '/catalog/view/javascript/', $output);
+                        }
+
+                        if ($config->get('maxcdn_css')) {
+                            $output = str_replace('href="catalog/view/theme/' . $config->get("config_template") . '/stylesheet/', 'href="' . $domain . '/catalog/view/theme/' . $config->get("config_template") . '/stylesheet/', $output);
+                            $output = str_replace('href="catalog/view/theme/default/stylesheet/', 'href="' . $domain . '/catalog/view/theme/default/stylesheet/', $output);
+                        }
+                    }
+
+                    return $output;
+                }
+
+                ]]></add>
+        </operation>
+    </file>
+
+</modification>

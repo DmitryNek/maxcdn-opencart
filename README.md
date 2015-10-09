@@ -10,9 +10,9 @@ Supported OpenCart versions 1.5.x - 2.x.x.
 #### Method #1 (if store's Settings -> FTP tab is configured)
 
 * Go to "Extensions" -> "Extension Installer" on your OpenCart store's admin.
-* Click on "Upload File" button, locate and select maxcdn.ocmod.zip file.
+* Click "Upload File" button, locate and select maxcdn.ocmod.zip file.
 * Wait till installation process is finished and then make additional steps if needed.
-* Go to "Extensions" -> "Modification" and click on "Refresh" button to rebuild modification cache.
+* Go to "Extensions" -> "Modification" and click "Refresh" button to rebuild modification cache.
 * Go to "Extensions" -> "Modules" and click "Install" button of "MaxCDN" module.
 
 #### Method #2 (manual files upload)
@@ -20,9 +20,9 @@ Supported OpenCart versions 1.5.x - 2.x.x.
 * Unzip file maxcdn.oc20.zip
 * Upload contents of "upload/" folder to your OpenCart store's www root directory.
 * Go to "Extensions" -> "Extension Installer" on your OpenCart store's admin.
-* Click on "Upload File" button, locate and select install.ocmod.xml file.
+* Click "Upload File" button, locate and select install.ocmod.xml file.
 * Wait till installation process is finished and then make additional steps if needed.
-* Go to "Extensions" -> "Modification" and click on "Refresh" button to rebuild modification cache.
+* Go to "Extensions" -> "Modification" and click "Refresh" button to rebuild modification cache.
 * Go to "Extensions" -> "Modules" and click "Install" button of "MaxCDN" module.
 
 AFTER MODULE INSTALLATION CHECK STORE'S SETTINGS "SERVER" TAB IF "MAINTENANCE MODE" IS OFF.

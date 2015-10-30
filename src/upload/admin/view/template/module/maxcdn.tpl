@@ -3,7 +3,7 @@
 /**
  * @author: Dmitry Shkoliar @DrmitryNek
  * @project: maxcdn-opencart
- * @file: admin/view/template/module/maxcdn.php
+ * @file: admin/view/template/module/maxcdn.tpl
  */
 ?>
 <?php echo $header; ?>

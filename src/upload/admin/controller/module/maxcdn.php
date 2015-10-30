@@ -49,7 +49,7 @@ class ControllerModuleMaxCDN extends Controller
         $this->data['text_disabled'] = $this->language->get('text_disabled');
         $this->data['text_yes'] = $this->language->get('text_yes');
         $this->data['text_no'] = $this->language->get('text_no');
-        $this->data['text_edit'] = $this->language->get('text_edit');
+        $this->data['text_edit_info'] = $this->language->get('text_edit_info');
 
         $this->data['button_save'] = $this->language->get('button_save');
         $this->data['button_cancel'] = $this->language->get('button_cancel');

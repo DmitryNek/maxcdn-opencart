@@ -39,6 +39,8 @@ class ControllerModuleMaxCDN extends Controller
             $this->data['error_warning'] = '';
         }
 
+        $this->data['heading_title'] = $this->language->get('heading_title');
+        
         $this->data['entry_status'] = $this->language->get('entry_status');
         $this->data['entry_domain'] = $this->language->get('entry_domain');
         $this->data['entry_images'] = $this->language->get('entry_images');

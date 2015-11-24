@@ -29,6 +29,7 @@
 
                             $output = str_replace('src="catalog/view/theme/' . $config->get("config_template") . '/image/', 'src="' . $domain . '/catalog/view/theme/' . $config->get("config_template") . '/image/', $output);
                             $output = str_replace('src="catalog/view/theme/default/image/', 'src="' . $domain . '/catalog/view/theme/default/image/', $output);
+                            $output = str_replace('src="image/', 'src="' . $domain . '/image/', $output);
                         }
 
                         if ($config->get('maxcdn_js')) {
